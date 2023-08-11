@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-color: #0E3386;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .stats-container {
+    margin: 20px;
+    min-width: 200px;
+    height: 100px;
+    position: relative;
+    padding: 15px;
+  }
+  
+  .stats-container h4 {
+    font-size: large;
+    margin-top: -2px;
+    color: white;
+  }
+  
+  .icon {
+   color: white;
+  } 
+  
+  .counter {
+    font-size: 65px;
+    color: rgb(243, 224, 23);
+    margin-top: 8px;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      flex-direction: column;
+    }
+    .stats-container {
+      margin: 40px;
+      min-width: 200px;
+      height: 100px;
+      position: relative;
+      padding: 15px;
+    }
+  }
+  
