@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(0, 0, 0); */
+    background-color: white;
+}
+
+.conatiner-calculator {
+    background-color: black;
+    max-width: 400px;
+    padding: 22px;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+#input-result {
+    width: 100%;
+    padding: 12px;
+    font-size: 25px;
+    background: whitesmoke;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) inset;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 26px;
+}
+
+button {
+    padding: 15px 5px;
+    font-size: 22px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 90%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6565;
+}
+
+.number:hover {
+    background-color: rgb(50, 50, 50) !important;
+}
+
+.operator:hover {
+    background-color: grey !important;
+}
+
+.equals:hover {
+    background-color: forestgreen !important;
+}
+
+.clear {
+    background-color: red;
+    color: #fff;
+}
+
+.number {
+    background-color: black;
+    color: #fff;
+}
+
+.operator {
+    background-color: rgb(95, 95, 95);
+    color: #fff;
+}
+
+.equals {
+    background-color: rgb(5, 184, 5);
+    color: #fff;
+}
