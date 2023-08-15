@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom left, rgb(153, 255, 0) 50%, rgb(255, 169, 169) 50%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.digital-clock-conatiner {
+    margin-top: -100px;
+    min-width: 200px;
+    height: 100px;
+}
+h1{
+    margin-left: -5rem;
+}
+.clock {
+    display: flex;
+}
+
+.clock div {
+    margin: 15px;
+}
+
+.clock span {
+    width: 100px;
+    height: 39px;
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.clock #hour {
+    width: auto;
+    height: 60px;
+}
+
+.clock #min {
+    width: auto;
+    height: 60px;
+}
+
+.clock #seconds {
+    width: auto;
+    height: 60px;
+}
+
+.clock .text {
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.clock #ampm {
+    margin-top: 3.7rem;
+    margin-left:2rem;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background: whitesmoke;
+}
+
+@media (max-width: 600px) {
+    .digital-clock-conatiner {
+        margin-top: -390px;
+        min-width: 200px;
+        height: 100px;
+    }
+
+    .clock {
+        flex-direction: column;
+    }
+
+    .clock .text {
+        width: auto;
+    }
+
+    .stats-container {
+        margin: 40px;
+        min-width: 200px;
+        height: 100px;
+        position: relative;
+        padding: 15px;
+    }
+    h1{
+        margin-left: 0px;
+    }
+    .clock #ampm {
+        margin-top: 3.7rem;
+        margin-left:4.5rem;
+       
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes in JavaScript</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(103, 103, 103);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .conatiner-2 {
+            background: radial-gradient(red, blue);
+            color: white;
+            width: 600px;
+            min-height: 200px;
+            border: 2px solid black;
+            padding: 27px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #result {
+            margin: 30px 10px;
+            font-weight: 600;
+        }
+
+        #jokesBtn {
+            background-color: yellow;
+            width: 60px;
+            padding: 10px;
+            cursor: pointer;
+            color: black;
+            border-radius: 2px;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        @media screen and (max-width:768px) {
+            .conatiner-2 {
+                background: radial-gradient(red, blue);
+                color: white;
+                width: 100%;
+                min-height: 200px;
+                border: 2px solid black;
+                padding: 27px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="conatiner-jokes">
+        <h2>Random Jokes</h2>
+        <div class="conatiner-2">
+            <div id="result">Joke is Loading......</div>
+            <div id="jokesBtn">Click Me</div>
+        </div>
+    </div>
+    <script>
+        const result = document.querySelector("#result");
+        const jokesBtn = document.querySelector("#jokesBtn");
+
+        const setJokes = () => {
+            const setHeader = {
+                headers: {
+                    Accept: "application/json"
+                }
+            }
+            fetch("https://icanhazdadjoke.com/", setHeader)
+                .then((res) => res.json())
+                .then((data) => {
+                    result.innerHTML = data.joke;
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+        jokesBtn.addEventListener("click", setJokes);
+        setJokes();
+    </script>
+
+</body>
+
+</html>

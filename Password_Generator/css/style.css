@@ -1,0 +1,77 @@
+h2 {
+    font-size: 30px;
+    padding: 4px 9px;
+    background-color: gold;
+    color: black;
+}
+body{
+    background: linear-gradient(to bottom, lightgreen, lightblue);
+
+}
+.container {
+    background-color: beige;
+    width: 450px;
+    height: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    /* box-shadow: 1px 1px 20px rgba(136, 132, 132, 0.312);   */
+}
+
+input {
+    font-size: 20px;
+    width: 400px;
+    height: 49px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.449);
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.inputtt::placeholder {
+    letter-spacing: 1px;
+    font-size: 23px;
+}
+
+#btnnn {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    border: none;
+    background: red;
+    padding: 5px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    h2 {
+        font-size: 25px;
+        padding: 4px 9px;
+    }
+    input {
+        font-size: 18px;
+        width: 380px;
+        height: 39px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.449);
+        border-radius: 3px;
+        margin-top: 30px;
+        margin-left: 29px;
+    }
+    .inputtt::placeholder {
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    #btnnn {
+        font-size: 20px;
+        margin-top: 65px;
+        padding: 4px 9px;
+        border-radius: 2px;
+    }
+    
+}

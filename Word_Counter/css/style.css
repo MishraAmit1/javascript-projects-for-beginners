@@ -1,0 +1,56 @@
+
+body {
+    background-color: rgb(243, 157, 52);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44rem;
+    height: 30rem;
+    background: rebeccapurple;
+    border: 2px solid black;
+}
+
+h1 {
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    font-size: 1.7rem;
+    text-align: center;
+    background-color: rgb(83, 243, 24);
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.container #textbox {
+
+    width: 97.5%;
+    margin-bottom: -18px;
+    border: 2px solid black;
+    height: 18rem;
+    border: 7px solid red;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .container {
+        margin: 0px 0rem;
+        width: 100%;
+        height: 30rem;
+        border: 2px solid black;
+    }
+    .container #textbox {
+        border: 4px solid red;
+        
+    }
+
+}

@@ -1,0 +1,58 @@
+body {
+    padding: 50px 90px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.temperature-convertor-container {
+    text-align: center;
+    background-color: aqua;
+    padding: 60px 70px;
+    border: 8px solid black;
+}
+
+.input-div {
+    display: inline-block;
+}
+
+.temp-inp {
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+}
+
+label {
+    font-size: larger;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width :768px) {
+    body {
+        padding: 0px;
+    }
+    .temperature-convertor-container {
+    text-align: start;
+        padding: 60px 10px;
+        border: 2px solid black;
+        /* display: flex; */
+    }
+    .first-div{
+        display: flex;
+        margin-bottom: 2rem;
+    }
+ 
+    .temp-inp {
+        padding: 5px 5px;
+        margin: 9px;
+        width: 190px; 
+    }
+    label{
+      margin-left: 1rem;  
+    }
+}

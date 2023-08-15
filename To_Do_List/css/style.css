@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.to-do-conatiner {
+    background: linear-gradient(140deg, #153677, #4e085f);
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.to-do-app {
+    width: 550px;
+    max-height: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.to-do-app h2 {
+    color: #002765;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.to-do-app h2 i {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-radius: 40px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 24px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #ff5945;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+ul li {
+    font-size: 17px;
+    padding: 12px 8px 12px 27px;
+    user-select: none;
+    cursor: pointer;
+    /* color: white; */
+    position: relative;
+}
+
+li {
+    background-color: #a6adb5;
+    margin: 15px 0px;
+    border-radius: 2px;
+    color: black;
+}
+
+ul li.checked {
+    color: #555;
+
+    text-decoration: line-through;
+}
+
+ul li span {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    color: #000;
+    line-height: 40px;
+    text-align: center;
+    font-size: 29px;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:768px) {
+    .to-do-app {
+        width: 100%;
+        padding: 40px 7px 90px;
+
+    }
+
+    .to-do-app h2 {
+        font-size: 20px;
+    }
+
+    .to-do-app h2 i {
+        margin-left: 12px;
+    }
+
+    .row {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #edeef0;
+        padding-left: 10px;
+        margin-bottom: 25px;
+        border-radius: 20px;
+    }
+    input {
+        width: 100%;
+        height: 20px;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 5px;
+        font-weight: 24px;
+    }
+    button {
+        padding: 13px 25px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+    
+}
