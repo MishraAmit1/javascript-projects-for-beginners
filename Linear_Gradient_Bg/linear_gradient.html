@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient UI</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to right, #6a11cb, #2575fc);
+      /* Left to Right Gradient */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    button {
+
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      color: #fff;
+      background: #ff7e5f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:nth-child(2) {
+      background: #feb47b;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .copy-text {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    #gradient_box {
+      margin-top: 10px;
+      padding: 10px;
+      width: 300px;
+      text-align: center;
+      border: 2px dashed #fff;
+      /* background: rgba(255, 255, 255, 0.2); */
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="button1">#FF5733</button>
+  <button id="button2">#FEB47B</button>
+
+  <div class="copy-text">Copy the text here</div>
+  <div id="gradient_box">linear-gradient(to right, #ff7e5f, #feb47b)</div>
+  <!-- <div id="gradient_box" onclick="myFunction()">linear-gradient(to right, #ff7e5f, #feb47b)</div>
+  The myFunction() attempts to copy the text from the div with the id gradient_box, but the select() method is
+  applicable to input or textarea elements, not div elements. -->
+
+  <!-- function myFunction() {
+    // Get the text field
+    var copyText = document.getElementById("myInput");
+  
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+  
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+    
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+  } -->
+
+  yh
+  <!-- function myFunction() {
+    // Get the text field
+    var copyText = document.getElementById("gradient_box");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+  } -->
+  <script>
+    const button1 = document.getElementById("button1");
+    const button2 = document.getElementById("button2");
+    const gradient_box = document.getElementById("gradient_box");
+    let btn1 = "#000";
+    let btn2 = "#444";
+    const mainConvertor = () => {
+      let color = "#"
+      let myHexValues = "0123456789abcdef";
+      for (let i = 0; i < 6; i++) {
+        color = color + myHexValues[Math.floor(Math.random() * 16)]
+      }
+      return color;
+    }
+
+    const changeLinearGradient1 = () => {
+      btn1 = mainConvertor();
+      button1.innerText = btn1;
+      document.body.style.backgroundImage = `linear-gradient(to right, ${btn1}, ${btn2})`;
+      gradient_box.innerHTML = `background-image: linear-gradient(to right, ${btn1}, ${btn2}`
+
+      console.log(btn2);
+    }
+    const changeLinearGradient2 = () => {
+      btn2 = mainConvertor();
+      button1.innerText = btn2;
+      document.body.style.backgroundImage = `linear-gradient(to right, ${btn1}, ${btn2})`;
+      gradient_box.innerHTML = `background-image: linear-gradient(to right, ${btn1}, ${btn2}`
+
+      console.log(btn2);
+    }
+    button1.addEventListener("click", changeLinearGradient1);
+    button2.addEventListener("click", changeLinearGradient2);
+  </script>
+</body>
+
+</html>
