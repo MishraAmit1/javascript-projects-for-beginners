@@ -28,23 +28,19 @@ function myFunction() {
   alert("Copied the text: " + copyText.value);
 }
 </script>
-
-# What Went Wrong?
+```
+# What Went Wrong ?
 ## select Method Limitation:
+The select method is specifically designed for <input> and <textarea> elements. Since myInput is a <div> element, calling select on it resulted in an error.
 
-The select method is specifically designed for <input> and <textarea> elements.
-Since myInput is a <div> element, calling select on it resulted in an error.
-Invalid value Property:
-
-The value property is not valid for a div element, leading copyText.value to return undefined.
-Because of these issues, the code failed to copy the text from the div element.
-
+##Invalid value Property:
+The value property is not valid for a <div> element, leading copyText.value to return undefined. Because of these issues, the code failed to copy the text from the div element.
 
 #Solution
-
 To fix this, I updated the code to directly access the innerHTML of the div and copy it using the navigator.clipboard.writeText method. This approach avoids the limitations of the select method and allows seamless copying from a div.
 
-#Updated Code:
+# Updated Code:
+
 ```html
 <div id="gradient_box">linear-gradient(to right, #ff7e5f, #feb47b)</div>
 <button onclick="copyGradient()">Copy Gradient Code</button>
@@ -62,19 +58,16 @@ function copyGradient() {
     });
 }
 </script>
-```
+ ```
 # Explanation of the Solution
-
-Explanation of the Solution
 1. Accessing innerHTML:
-
-Instead of using the select method, I used the innerHTML property to get the text inside the div element (gradient_box).
+   Instead of using the select method, I used the innerHTML property to get the text inside the div element (gradient_box).
 2. Using navigator.clipboard.writeText:
-
-This method copies the text directly to the clipboard, ensuring compatibility with modern browsers.
+   This method copies the text directly to the clipboard, ensuring compatibility with modern browsers.
 3. Error Handling:
+   Added error handling with catch to log any issues during the copy process.
+4. User Feedback:
+   Displayed an alert with the copied text to confirm the success of the operation.
 
-Added error handling with catch to log any issues during the copy process.
-4.User Feedback:
+This `README.md` file explains the project, outlines the issue you faced, presents the solution, and includes an updated code snippet.
 
-Displayed an alert with the copied text to confirm the success of the operation.
